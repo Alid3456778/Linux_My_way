@@ -1,0 +1,176 @@
+-to switch the user to root user is "sudo su"
+
+creating a file :
+		  1.cat://creating a file ,
+			//a cat file is we can add notes or text,
+			//to create  file " cat > file_name , now Enter the text and , doing ctrl+d for exit ",
+			-cat > file_name
+			//it also concannecate the file like " cat  file_1 file_2 > all " from this file_1 and file_2 is save in all // all contain file_1 and file_2 data,
+			-cat  file_1 file_2 > all
+			//cat inverse is "tac" which revere the file 
+			-tac file_name  
+			//to see cat file content  we  do is "cat file_name" ..
+			-cat file_name
+			// to add the data "cat >> file2";
+
+		  2.touch://creating an empty file,
+			  //"touch file_name",
+			  //But it also contain it time-stamp:  1. accese time : last time the file is open , touch -a file_name
+								2. Modify time : last time the Modified happen , touch -m file_name
+								3. change time : last time when the files metadata was changed 
+			 //to see the time-stamp use "stat file_name " ,
+			 // to update time-stamp use "touch -a file_name "..
+
+
+-to create multiple file in touch at a same time is "touch file1 file2 file3" 
+
+
+-"ls" it is for showing the list of file and directory 
+-"ls -a " is use to show all files with  hidden files also
+
+
+
+editor for a file :
+		   1.vi editor : //text editor  
+				 // edit plain file 
+				 //"1. vi file_name then ENTER , 2.then press "i" , 3.Now Insert , 4.esc , 5.":wq" ",
+				 // " :w ": for to Save 
+				 //" :wq , :x " for to Save and Quit
+				 //" :q " for Quit
+				 //" q! " for force Quit , no save
+				 // to navigate we use " H J K L "
+
+		 2.nano editor : //nano file_name 
+				 //1. nanao file_name , 2.then ctrl+x , 3.to save data use Y ,4. Enetr
+
+
+
+
+Creatung Folder:  	
+			//in linux we does not use Folder we use Directry 
+			//to create a directry we use " mkdir "
+			- mkdir Directry_name
+			//it stands for " make directry "
+			//to create multiple Directory in one go we do by using " -p " and " / "
+			-mkdir -p dir_1/dir_2/dir_3
+
+How to change a directory :
+				//for going back or going forward to any directry we use " cd .."
+				-cd ..
+				//it stands for " change directry "
+				//to going back multipe directory like , i want to go back 2 directry i will use " / " after dots(..)
+				-cd ../../
+
+How to to check your Working Directory / Which Directry you are in :
+
+				// for checking that which directory we are we simple use " pwd "
+				-pwd
+				//it stands for " print Working Directry "
+				//it is use to see which directry we are in
+
+
+-"ls -l "is use to show wich one is file and which one is Directry
+
+
+How to create a Hidden file or Directry:
+				//file are created hidden it can not be made while it is working ex:
+					//when we are creating a file with "touch" command or "cat" we simple put a " . "(dot) before that file name
+					//by just putting a dot(.) before a file_name it become a hidden file
+				-touch .file_name
+				-mkdir .dir_name
+
+
+-"ls -a " is use to show all files with  hidden files also
+-"ls -al" is use to show all directory and file 
+	//its a combination of "ls -a" and "ls -l"
+
+
+How to Copy a file data :
+				//we use copy data to transfer data from one file to another file 
+				//it's syntax is " cp "
+				-cp  Source_file  Destination_file
+					   | 		 |
+					soucrce        copy 
+				//" cp " stands for " copy paste"
+				//it transfer data from Source_file to Destination_file 
+				//to check the copy is succesfull or not we can see with cat command
+				-cat file_name
+
+
+How to Cut And Past / Move :
+				//we can move a file to an directory because you cannot move a file into another file 
+				//for moving a file we use " mv "
+				-mv  file_name  dir_name
+					 |	    |
+				    who to move    where to move
+				//" mv " stands for " move "
+				//to see the result we can simple use the "cd" to shift to that directry and "ls" to check the content 
+				-cd dir_name
+				-ls
+
+To give new Name to existing File :
+				//we use the same command as to cut the file but in this we use just a new name as per Directry_name
+				- mv file_1  New_file
+					|	|
+				    old name   new name
+				//to check we can use "ls"
+				-ls
+
+How to remove a Directry or File :
+				//there are many ways which we can remove the file or  directory
+		1)Dirctry:
+			1.rmdir ://Use when only the Dirctry is Empty not While its full
+				//stands for "remove directry"
+				-  rmdir dir_1
+			
+			2.rmdir -p://its is use When to Delete the Parent And Child Directry at same time 
+				   -  rmdir -p dir_parent/dir_child
+				   //to remove the parent and child directry 
+
+			3.rmdir -pv://remove all the parent and child with all Data / Verbro
+				    -  rmdir -pv dir_parent/dir_child
+				    //to remove the parent and child directry with data 
+		
+		2)File/Directry:
+			1.rm -rf://it delete the things and content Forcefully 
+				 //"rf " and " f " represent Forcefully
+				 -  rm -rf file_name/dir_name
+				 //alert while using this command 
+
+			2.rm -rp://remove data directry include parent and subdirectry 
+				 -  rm -rp child_1/dir_2
+		
+			3.rm -r://remove empty file and directory
+				-  rm -r file_name/dir_name
+
+
+
+				
+Command Which can use to see file with feature :
+			1.head://"head" is use to get top 10 line 
+				-head file_name
+
+			2.less://"less" is use to print full first page
+				-less file_name
+
+			3.tail://"tail" is used to print the last 10 line 
+				-tail file_name
+
+			4.more://"more" its used to see all pages one by one 
+				-more file_name
+		
+			4.history://"history" its used to see all past command
+				  - history
+
+
+
+
+
+
+
+
+
+
+
+
+
