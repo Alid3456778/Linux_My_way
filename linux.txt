@@ -159,10 +159,77 @@ Command Which can use to see file with feature :
 			4.more://"more" its used to see all pages one by one 
 				-more file_name
 		
-			4.history://"history" its used to see all past command
+			5.history://"history" its used to see all past command
 				  - history
 
 
+
+
+Commands :
+		1.hostname://" hostname " is use to get the info about there PC or what so ever
+			   -hostname
+			   //" hostname -i "is used to get ip address of that hostname
+			   -hostname -i
+
+		2.ifconfig://" ifconfig " is use to get ip addres and more information of that computer
+			   -ifconfig
+
+		3.System Info :// we use absolute path to get the data 
+				    -cat /etc/os-release
+				    // this os-release contain the information about System
+
+		4.Installing ://for installing any package we use "yum install package_name"--"Yellodog Update Modifier"
+			      -yum install httpd
+			      //if we use " -y " in last of install it means that 
+			      //Yes to all Options 
+			      -yum install httpd -y 
+			      //it will say Yes to alll option
+
+		5.List of Package://It show you the List of install packages "yum list install" 
+				  -yum list install		
+
+		6.Removing ://unstalling the packages "yum remove package_name "
+			    -yum remove httpd
+	
+		7.Updating://Updating the package "yum update package_name"
+			   -yum update httpd
+
+		8.Starting Program://when you install the program and you want to start that program 
+				   //for that we use "service psckage_name start"
+				   -service httpd start
+
+		9.Program Status://it denotes you that is it working/start or not "service package_name status"
+				 -service httpd status
+				 //if the service is start it denotes with green color
+
+		10.Automate the Start://when ever you start your system you have to manually start the package 
+				      //to automate the start of a program when open the system "chkconfig package_name on"
+				      -chkconfig httpd on
+				      //the httpd will automaticaly start when we start the program
+				      //and to off that we use "chkconfig package_name off "
+				      -chkconfig httpd off
+
+		11.Find a Package info ://to find a package info or is it installed or not we use "which package_name"
+					-which httpd
+
+		12.Who are you ://it is used to find who are you are you root user or other "whoami"
+				-whoami
+
+		13.Message to Other User://in linux many other people are using the same system to perform opertaion 
+					 //to send the message to all user we use " echo "Meassage" " 
+					 -echo "Message to ALL "
+					 //it also use to create a file "echo "message" > file_name "
+					 -echo "hello " > file_1
+					 //"echo "new message" >> file_name" use to insert data at existing file 
+					 -echo "new Message " >> file_1
+					 //to empty the existing file "echo > file_name"
+					 -echo > file_1
+
+		14.To find ://"grep your_word destination" it's used to find things from the directory
+			    -grep root /etc/password
+
+		15.sort://use to Sort the data "sort"
+			-sort
 
 
 
