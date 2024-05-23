@@ -165,7 +165,7 @@ Command Which can use to see file with feature :
 
 
 
-Commands :
+Commands installing , deleting and other :
 		1.hostname://" hostname " is use to get the info about there PC or what so ever
 			   -hostname
 			   //" hostname -i "is used to get ip address of that hostname
@@ -230,6 +230,59 @@ Commands :
 
 		15.sort://use to Sort the data "sort"
 			-sort
+
+
+Add User :
+			//to create a user which can work as a user and don't have the authority to be a admin
+			-useradd user_name
+			//to check the user is created or not we use " cat " and Directory is "./etc/password"
+			-cat ./etc/password
+			//if we created  a user the group is automatic is created but when a group is created it doesn't creat the user
+	
+Add Group :
+			//to add a group "groupadd name"
+			-groupadd name
+			//to check the group is created or not we use " cat " and Directory is "./etc/group"
+			-cat ./etc/group
+			//the user must be diclared before putting in the group
+
+			
+			1.To Add user:// to add a single user in the group and the user must be created
+				      -gpasswd -a user_name group_name
+
+			2.Multiple Add to Group://use to put multiple user in a group in one command
+						-apasswd -M name1,name2,name3 group_name
+
+
+To creat a ShortCut :	
+			
+		1.softlink:
+			//shortcut is to redirect the user to the destination of file
+			//first is to create a shortcut for the application
+			-ln -s file_1    name_of_shortcut
+			//to check the shortcut we use "ls"
+
+		2.hardLink:
+			//it is where you created a copy when you change the shortcut it will automaticly refelect on the real file
+			-ln file_2    backup_file_or_copy_file
+			//"ls "to check the file
+
+To Combine the Directory :
+			//its is use to create where directory is compresed in and group the file at a place
+			-tar -cvr  dir tar    dir_1
+			//to zip the file
+			-gzp dir tar
+			//to unzip
+			//gunzip dit tar gz
+
+Download in backend :
+			//"wget" is a command where the download is happening in background and continously happening 
+			//evenr if you swithoff the user
+			-wget <url>
+
+			
+
+
 
 
 
