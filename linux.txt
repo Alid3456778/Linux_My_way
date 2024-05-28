@@ -280,7 +280,42 @@ Download in backend :
 			//evenr if you swithoff the user
 			-wget <url>
 
-			
+
+
+File Access and How to change:
+				//we can change the mode the owner and group owner
+
+
+				1.change mode of file : //it changes the premission that has been given to a user,group,and other people also
+							//there are read , write , exicute in form of (r=4,w=2,x=1) the flow should  not be change
+							//d rwx r_x rw_ //other info//
+						 |   |   |   |
+				       file/directory|   |   |
+					       user/root |   |
+						       group |
+							    other
+						// this is the format of how the mode is for who "d" is for directory or file it show the what is that
+						// the first rwx is for root user
+						// the second rwx is for group 
+						// the third is for other people
+						
+						// to chnage the mode we use "chmod"
+						// for changing we use the rwx value r=4 , w=2 , x=1 
+						// for doing that we add the number and where we want to insert
+						// if for root we need rwx so we plus the value 4+2+1= 7
+						// if we need group mode only need r_x so we plus the value 4+0+1= 5
+						-chmod 753 dir_name
+						// 7 is for root and rwx is in there
+						// 5 is for group and have r_x is in there
+						// 3 is for other user have _wx is there 
+						
+						//there is also a way where we use only the word and plus symbol
+
+				2.change owner of file ://we use " chown " to change the owner and set new owner of that file
+							-chown   owner_name   dir_name
+
+				3.change group of file ://to change the group by " chgrp "
+							-chgrp   new_name   dir_name
 
 
 
